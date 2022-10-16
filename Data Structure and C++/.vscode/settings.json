@@ -1,0 +1,18 @@
+{
+  "files.associations": {
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "istream": "cpp",
+    "coroutine": "cpp",
+    "random": "cpp",
+    "typeindex": "cpp",
+    "typeinfo": "cpp",
+    "new": "cpp",
+    "bitset": "cpp",
+    "algorithm": "cpp",
+    "*.tcc": "cpp",
+    "exception": "cpp",
+    "stack": "cpp",
+    "variant": "cpp"
+  }
+}
