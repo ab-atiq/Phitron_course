@@ -39,7 +39,7 @@ for i, num in enumerate(set_numbers):
 
 # tuple loop
 total_of_tuple = sum(tuple_numbers)
-print("Set sum of numbers: ", total_of_tuple)
+print("Tuple sum of numbers: ", total_of_tuple)
 
 total_tuple = 0
 for num in tuple_numbers:

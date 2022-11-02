@@ -21,17 +21,17 @@ def decide(command):
     brocken_word = command.split(" ")
     for word in brocken_word:
         if word in greet_words:
-            talkback("Hi guy")
+            talk_back("Hi guy")
             break
         elif word in bye_words:
-            talkback("bye bye. see you soon.")
+            talk_back("bye bye. see you soon.")
             break
         elif word in bad_words:
-            talkback("You are a bad guy. Behave yourself.")
+            talk_back("You are a bad guy. Behave yourself.")
             break
 
 
-def talkback(response):
+def talk_back(response):
     print(response)
 
 

@@ -1,4 +1,4 @@
-# when find 8 then loop will skip after continue statement
+# when find if condition matched then loop will skip after continue statement
 num = 0
 while num <= 20:
     num += 1

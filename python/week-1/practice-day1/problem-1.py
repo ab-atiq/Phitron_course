@@ -6,7 +6,9 @@ Write a python program that takes a floating number from users using input() and
 """
 float_value = float(input("Enter float number: "))
 print("Float value is: ", float_value)
+
 int_value = int(float_value)
 print("Integer value is: ", int_value)
+
 int_value_ceil = int(float_value)+1
 print("Integer value is: ", int_value_ceil)

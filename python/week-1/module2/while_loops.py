@@ -15,7 +15,7 @@ while num <= 50:
     num += 1
 print("Sum of 1-50 numbers: ", sum)
 
-# HW-1: 17-38 numbers sum
+# HW-2: 17-38 numbers sum
 num = 17
 sum = 0
 while num <= 38:

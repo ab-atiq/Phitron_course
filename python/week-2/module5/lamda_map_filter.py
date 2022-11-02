@@ -5,13 +5,13 @@ def add(x, y, z):
 sum = add(12, 23, 34)
 print(sum)
 
-# add_lamda = lambda x,y,z : x+y+z  # this is sort cut but when save next line automatically create.
+# add_lambda = lambda x,y,z : x+y+z  # this is sort cut but when save next line automatically create.
 
 
-def add_lamda(x, y, z): return x+y+z
+def add_lambda(x, y, z): return x+y+z
 
 
-total_lam = add_lamda(15, 35, 65)
+total_lam = add_lambda(15, 35, 65)
 print(total_lam)
 
 

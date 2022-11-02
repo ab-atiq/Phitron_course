@@ -1,6 +1,3 @@
-from cmath import inf
-
-
 name = "atik"
 type_name = type(name)
 print(type_name)

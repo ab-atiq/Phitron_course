@@ -22,3 +22,4 @@ print("I have no idea what is a generator")
 print(next(result))
 print(next(result))
 print(next(result))
+print(next(result)) # again print from first element

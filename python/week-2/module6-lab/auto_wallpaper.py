@@ -25,5 +25,10 @@ print(req_image)
 with open('open.jpg', 'wb') as image:
     image.write(req_image.content)
 
+# same work as 25-26 line of code
+
+# image = open('open.jgp','wb')
+# image.write(req_image.content)
+
 # set as wallpaper
 PyWallpaper.change_wallpaper("H:\Phytron\python\week-2\module6-lab\open.jpg")
