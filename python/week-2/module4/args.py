@@ -36,3 +36,21 @@ def add2(num1, num2, *numbers):
 
 
 add2(10, 20, 25, 30, 50)
+
+# set values of object (geek for geeks)
+
+
+class car():  # defining car class
+    def __init__(self, *args):  # args receives unlimited no. of arguments as an array
+        self.speed = args[0]  # access args index like array does
+        self.color = args[1]
+
+# creating objects of car class
+
+
+audi = car(200, 'red')
+bmw = car(250, 'black')
+mb = car(190, 'white')
+
+print(audi.color)
+print(bmw.speed)

@@ -40,3 +40,36 @@ def loop_all_types(name, *args, **kwargs):  # use both args and kwargs
 
 loop_all_types("Rakib", "Hasan", "Monir", "Alif",
                good="Atiq", better="Rony", best="No one")
+
+
+# geek for geeks
+def myFun(arg1, arg2, arg3):
+    print("arg1:", arg1)
+    print("arg2:", arg2)
+    print("arg3:", arg3)
+
+
+args = ("Geeks", "for", "Geeks")
+myFun(*args)
+
+kwargs = {"arg1": "Geeks", "arg2": "for", "arg3": "Geeks"}
+myFun(**kwargs)
+
+
+# set value in object (geek for geeks)
+
+
+class car():  # defining car class
+    def __init__(self, **kwargs):  # args receives unlimited no. of arguments as an array
+        self.speed = kwargs['s']  # access args index like array does
+        self.color = kwargs['c']
+
+# creating objects of car class
+
+
+audi = car(s=200, c='red')
+bmw = car(s=250, c='black')
+mb = car(s=190, c='white')
+
+print(audi.color)
+print(bmw.speed)

@@ -1,6 +1,3 @@
-from ast import Num
-
-
 # when find 8 then loop will break
 num = 1
 while num <= 20:

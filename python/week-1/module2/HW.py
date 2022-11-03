@@ -7,7 +7,7 @@ while num <= 39:
         print(num)
     num += 1
 
-# 2. use for looop to print numbers between 13 to 39 using and range
+# 2. use for loop to print numbers between 13 to 39 using and range
 print("Use for loop: ")
 for num in range(13, 40):
     if num % 2 != 0:
