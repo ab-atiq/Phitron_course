@@ -7,7 +7,7 @@ class User:
 
     # private method
     def __get_password(self):
-        print(self.password)
+        print(self.__password)
 
     def user_login(self, name, password):
         if (name == self.name and password == self.__password):
@@ -16,7 +16,10 @@ class User:
 
 
 abul = User("Abul Bashar", "ABC1234", '01234567989')
-# print(abul.__password)
+print(abul.name)  # name is public
+
+# password, phone, get_password is private
+# print(abul.__password)  
 # print(abul.__phone)
 # abul.__get_password()
 

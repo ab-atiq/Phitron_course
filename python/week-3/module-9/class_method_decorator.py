@@ -1,20 +1,27 @@
 # difference between staticmethod and classmethod
 
 class Shopping:
-    mall = 'Basundara shopping complex'
+    mall = 'Basundara shopping complex'  # class attribute
+    value = 50
 
     def __init__(self, customer) -> None:
-        self.customer = customer
+        self.customer = customer  # instance attribute
         self.total = 0
         self.items = []
 
     def opening_hour(cls, day):
         return cls.mall
 
-    # we don't need to create class instance to use
-    @staticmethod
-    def multiply(x, y):
-        return x*y
+    # we don't need to create class instance to use. it has a cls parameter that will access this class attribute, not instance attribute.
+    # It can be used to declare a factory method that returns objects of the class.
+    @classmethod
+    def multiply(cls, x, y):
+        return cls.value*x*y
+
+    @classmethod
+    def getObject(cls):
+        # here parameter will be same as __init__ parameter.
+        return cls('Steve')
 
     # inner class method for set total amount
     def add_to_total(self, amount):
@@ -31,4 +38,31 @@ class Shopping:
         pass
 
 
-# use class method from any website
+# call class method using Class
+mul = Shopping.multiply(1, 2)
+print(mul)
+# call static method using Object
+shop = Shopping("Abul")
+print(shop.multiply(3, 5))
+
+# class method as factory method
+shop2 = Shopping.getObject()
+print(shop2.customer)
+
+
+class Student:
+
+    def __init__(self, name, age):
+        self.name = name  # instance attribute
+        self.age = age  # instance attribute
+
+    @classmethod
+    # It can be used to declare a factory method that returns objects of the class.
+    def getobject(cls):
+        # here parameter will be same as __init__ parameter.
+        return cls('Steve', 25)
+
+
+std = Student.getobject()
+print(std.name)
+print(std.age)

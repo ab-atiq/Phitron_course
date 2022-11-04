@@ -17,12 +17,17 @@ def get_factorial(n):
     fact = math.factorial(n)
     print(f"Factorial of {n} number is: {fact}")
 
-# get_factorial(5)
-# timer(get_factorial(10))
+# before use decorator @timer
+# timer(get_factorial)(10)
+timer(get_factorial(10))
+print()
 
-
-# after use decorator (timer)
+# after use decorator @timer above get_factorial.
 get_factorial(5)
+print()
 
 # key words args (kwargs) use
 get_factorial(n=6)
+
+# performance check
+get_factorial(100)
