@@ -9,6 +9,7 @@ class Phone:
         self.price = price
         self.color = color
 
+    # method in class
     def send_sms(self, num, text):
         sms = f'sending: {text} to: {num}'
         return sms

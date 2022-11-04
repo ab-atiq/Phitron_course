@@ -12,6 +12,9 @@ class Person:
         print(
             f'This is {self.name}, I am {self.age} years old and I have {self.money}')
 
+    def __repr__(self) -> str:
+        return "Print our string object"
+
     def __eq__(self, __o: object) -> bool:
         return self.age == __o.age
 
@@ -27,6 +30,12 @@ class Person:
 
 person1 = Person("Abul", 22, 400, 102)
 person2 = Person("Bashar", 23, 500)
+
+# default address return from object, but when use __repr__() then we can see return string from __repr__.
+print(person1)
+print(person2)
+
+# which property will addition that declare in class with __add__() method.
 print(person1 + person2)
 
 # before create __call__ dunder method we can not get any return or print to call an objects
