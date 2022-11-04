@@ -1,3 +1,4 @@
+# common and uncommon attribute
 # laptop, phone, watch, tablet,
 class Laptop:
     def __init__(self, brand, price, color, disc_size):
@@ -19,9 +20,11 @@ class Laptop:
 
 class Phone:
     def __init__(self, brand, price, color, camera, sim_num):
+        # these three are common with Laptop class init, we can create another class for this three item use. but it is very helpful when it is used much time otherwise not helpful.
         self.brand = brand
         self.price = price
         self.color = color
+
         self.camera = camera
         self.sim_num = sim_num
 

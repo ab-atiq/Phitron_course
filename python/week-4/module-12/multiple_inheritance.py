@@ -18,11 +18,13 @@ class SportsTeam:
     def add_player(self, player_name):
         self.team.append(player_name)
 
-
+# multiple inheritance use in Student Class
 class Student(School, Grade, SportsTeam):
     def __init__(self, name, grade_name, school_name, sports_name):
         self.name = name
         print('Student init called')
+
+        # set attribute in School, Grade, SportsTeam
         Grade.__init__(self, grade_name)
         School.__init__(self, school_name)
         SportsTeam.__init__(self, sports_name)
@@ -34,6 +36,7 @@ print(anata_j.name)
 print(anata_j.grade_name)
 print(anata_j.school_name)
 print(anata_j.team)
+
 anata_j.add_player('Borsha')
 anata_j.add_player('AJ')
 print(anata_j.team)

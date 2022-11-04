@@ -47,4 +47,4 @@ num = 55
 name = 'Ena'
 rashed = Passenger('Rashed', '01717', 'khulna')
 
-print(rashed)
+print(rashed) # rashed is Passenger data type
