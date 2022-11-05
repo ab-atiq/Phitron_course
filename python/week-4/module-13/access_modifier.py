@@ -1,4 +1,4 @@
-# public protected private
+# public, protected, private
 class Account:
     def __init__(self, holder) -> None:
         self._account_holder = holder
@@ -30,6 +30,6 @@ nas.deposit(50000)
 nas.deposit(15000)
 print(nas.get_balance())
 
-# print(dir(nas))
+print(dir(nas))
 # print(nas.__balance)
-# print(nas._StudentAccount__balance)
+print(nas._StudentAccount__balance)

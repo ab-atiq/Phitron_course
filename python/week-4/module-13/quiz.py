@@ -1,3 +1,4 @@
+# override thinking in quiz
 class A:
     def __init__(self) -> None:
         self.multiply(15)

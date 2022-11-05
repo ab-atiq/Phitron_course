@@ -12,4 +12,4 @@ wooden_chair = Chair()
 
 print(issubclass(Chair, Furniture))
 print(isinstance(wooden_chair, Chair))
-print(isinstance(wooden_chair, Furniture))
+print(isinstance(wooden_chair, Furniture)) # though Furniture inherit in Chair class

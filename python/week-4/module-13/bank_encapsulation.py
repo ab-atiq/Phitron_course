@@ -24,14 +24,18 @@ class StudentAccount(Account):
 
 
 rafsan = StudentAccount('Rafsan', 50000, 'IUB')
-# print(rafsan.__balance)
+# print(rafsan.__balance) # balance is private
 print(rafsan.holder)
 rafsan.deposit(20000)
 rafsan.deposit(35000)
 rafsan.deposit(15000)
+
 # rafsan.__balance = 0
 # print(rafsan.__balance)
+
 print(rafsan.get_acc_num())
+
 # rafsan.__balance = 0
+
 rafsan._account_number = 135
 print(rafsan._account_number)
