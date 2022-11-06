@@ -39,7 +39,7 @@ class Hall(Star_Cinema):
         self.__list_of_tuple = list_of_tuple  # tuple contain row and col
 
         self.tickets_lst = []
-
+        is_booked_before = False
         if show_id in self.__seats:
             for show_tpl in self.__show_list:
                 if show_tpl[0] == show_id:
@@ -50,7 +50,10 @@ class Hall(Star_Cinema):
                         # print(self.seats[show_id])
                         # print(self.seats[show_id][row][col])
 
-                        self.__seats[show_tpl[0]][row][col] = 'X'
+                        if self.__seats[show_tpl[0]][row][col] == 'X':
+                            is_booked_before = True
+                        else:
+                            self.__seats[show_tpl[0]][row][col] = 'X'
 
                         # print(show_id, self.seats[show_id])
                         # print(self.seats)
@@ -61,7 +64,7 @@ class Hall(Star_Cinema):
                         concat_r_c_str = r_str+c_str
                         self.tickets_lst.append(concat_r_c_str)
 
-                    if True:
+                    if is_booked_before == False:
                         print("##### Ticket booked successfully!! #####")
                         print(
                             "\n---------------------------------------------------------------------")
@@ -79,6 +82,9 @@ class Hall(Star_Cinema):
                         print(f"Hall: {self.__hall_no}")
                         print(
                             "---------------------------------------------------------------------\n")
+                    else:
+                        print(
+                            "\nOh!! your selected seat book already. please input empty seat.\n")
         # if show_id in self.seats:
         #     for key in self.seats:
         #         if key == show_id:
