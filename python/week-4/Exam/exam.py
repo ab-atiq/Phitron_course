@@ -1,20 +1,20 @@
 class Star_Cinema:
-    hall_list = []
+    _hall_list = []
 
     def entry_hall(self, hall_object):
-        self.hall_list.append(hall_object)
+        self._hall_list.append(hall_object)
 
 
 class Hall(Star_Cinema):
     # false means free
-    rows_cols_2D_list = []
+    __rows_cols_2D_list = []
 
     def __init__(self, rows, cols, hall_no) -> None:
-        self.seats = {}  # dictionary of seat information
-        self.show_list = []  # list of tuples(show information)
-        self.rows = rows
-        self.cols = cols
-        self.hall_no = hall_no
+        self.__seats = {}  # dictionary of seat information
+        self.__show_list = []  # list of tuples(show information)
+        self.__rows = rows
+        self.__cols = cols
+        self.__hall_no = hall_no
 
         for r in range(rows):
             single_list = []
@@ -22,26 +22,26 @@ class Hall(Star_Cinema):
             for c in range(cols):
                 cc = str(c)
                 single_list.append(rr+cc)
-            self.rows_cols_2D_list.append(single_list)
+            self.__rows_cols_2D_list.append(single_list)
 
     def entry_show(self, id, movie_name, time):  # id,movie_name,time are string format
-        self.id = id
-        self.movie_name = movie_name
-        self.time = time
+        self.__id = id
+        self.__movie_name = movie_name
+        self.__time = time
         make_tuple = (id, movie_name, time)  # tuple
-        self.show_list.append(make_tuple)
+        self.__show_list.append(make_tuple)
 
-        self.seats[id] = self.rows_cols_2D_list  # key=id, value=2d list
+        self.__seats[id] = self.__rows_cols_2D_list  # key=id, value=2d list
 
     def book_seats(self, customer_name, phone_number, show_id, list_of_tuple):
-        self.customer_name = customer_name
-        self.phone_number = phone_number
-        self.list_of_tuple = list_of_tuple  # tuple contain row and col
+        self.__customer_name = customer_name
+        self.__phone_number = phone_number
+        self.__list_of_tuple = list_of_tuple  # tuple contain row and col
 
         self.tickets_lst = []
 
-        if show_id in self.seats:
-            for show_tpl in self.show_list:
+        if show_id in self.__seats:
+            for show_tpl in self.__show_list:
                 if show_tpl[0] == show_id:
                     for single_tuple in list_of_tuple:
                         row = single_tuple[0]
@@ -50,7 +50,7 @@ class Hall(Star_Cinema):
                         # print(self.seats[show_id])
                         # print(self.seats[show_id][row][col])
 
-                        self.seats[show_tpl[0]][row][col] = 'X'
+                        self.__seats[show_tpl[0]][row][col] = 'X'
 
                         # print(show_id, self.seats[show_id])
                         # print(self.seats)
@@ -65,10 +65,10 @@ class Hall(Star_Cinema):
                         print("##### Ticket booked successfully!! #####")
                         print(
                             "\n---------------------------------------------------------------------")
-                        print(f"Name: {self.customer_name}")
-                        print(f"Phone Number: {self.phone_number}\n")
-                        if show_id in self.seats:
-                            for tpl in self.show_list:
+                        print(f"Name: {self.__customer_name}")
+                        print(f"Phone Number: {self.__phone_number}\n")
+                        if show_id in self.__seats:
+                            for tpl in self.__show_list:
                                 if show_id in tpl:
                                     print(
                                         f"Movie name: {tpl[1]}\tMovie Time: {tpl[2]}")
@@ -76,7 +76,7 @@ class Hall(Star_Cinema):
                         for ST in self.tickets_lst:
                             print(ST, end=", ")
                         print()
-                        print(f"Hall: {self.hall_no}")
+                        print(f"Hall: {self.__hall_no}")
                         print(
                             "---------------------------------------------------------------------\n")
         # if show_id in self.seats:
@@ -128,24 +128,24 @@ class Hall(Star_Cinema):
 
     def view_show_list(self):
         # print(self.show_list)  # running show
-        for tpl in self.show_list:
+        for tpl in self.__show_list:
             print(
                 f"Movie Name: {tpl[0]}\t\tShow ID: {tpl[1]}\t\tTime: {tpl[2]}")
 
     def view_available_seats(self, show_id):
-        if show_id in self.seats:
-            for tpl in self.show_list:
+        if show_id in self.__seats:
+            for tpl in self.__show_list:
                 if show_id in tpl:
                     print(
                         f"\n\nMovie Name: {tpl[1]}\tTime: {tpl[2]}\nX for already booked seats")  # 6
 
             print(
                 "\n---------------------------------------------------------------------")
-            for showID in self.seats:
+            for showID in self.__seats:
                 if showID == show_id:
-                    for r in range(self.rows):
-                        for c in range(self.cols):
-                            print(self.seats[show_id][r][c], end="\t")
+                    for r in range(self.__rows):
+                        for c in range(self.__cols):
+                            print(self.__seats[show_id][r][c], end="\t")
                         print()
             print(
                 "---------------------------------------------------------------------")
@@ -198,28 +198,32 @@ while opt != '4':
             name = input("Enter customer name: ")
             phone = input("Enter customer phone number: ")
             show_ID = input("Enter show ID: ")
+            try:
+                total_ticket = int(
+                    input("Enter number of tickets want to buy: "))
 
-            total_ticket = int(input("Enter number of tickets: "))
+                list_of_tuple = []
+                for i in range(total_ticket):
+                    try:
+                        # input will be string, like: A0
+                        seat = input("Enter seat no: ")
 
-            list_of_tuple = []
-            for i in range(total_ticket):
-                try:
-                    # input will be string, like: A0
-                    seat = input("Enter seat no: ")
+                        seat_str_to_lst = []
+                        for char in seat:
+                            seat_str_to_lst.append(char)
 
-                    seat_str_to_lst = []
-                    for char in seat:
-                        seat_str_to_lst.append(char)
+                        r_int = int(ord(seat_str_to_lst[0])-65)
+                        c_int = int(seat_str_to_lst[1])
 
-                    r_int = int(ord(seat_str_to_lst[0])-65)
-                    c_int = int(seat_str_to_lst[1])
-
-                    # tuple of row and col
-                    tuple_of_row_col = tuple((r_int, c_int))
-                    list_of_tuple.append(tuple_of_row_col)
-                except:
-                    print("Your given seat no is wrong. Please, give right seat no.")
-            obj_of_Hall.book_seats(name, phone, show_ID, list_of_tuple)
+                        # tuple of row and col
+                        tuple_of_row_col = tuple((r_int, c_int))
+                        list_of_tuple.append(tuple_of_row_col)
+                    except:
+                        print(
+                            "\nYour given seat no is wrong. Please, give right seat no.\n")
+                obj_of_Hall.book_seats(name, phone, show_ID, list_of_tuple)
+            except:
+                print("\nOh!! You enter wrong. Please input integer number. \n")
 
         case _:
             print("Your enter wrong. Please, input (1/2/3/4): ")
