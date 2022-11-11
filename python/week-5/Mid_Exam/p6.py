@@ -7,4 +7,4 @@ def dp(l1, l2):
     return r
 
 
-print dp([1, 2, 3], [4, 5, 6])
+print (dp([1, 2, 3], [4, 5, 6]))

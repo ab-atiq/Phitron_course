@@ -6,7 +6,7 @@ So if she sells seashells on the seashore,
 The shells that she sells are seashells, 
 I am sure She sells seashells on the seashore;
 """
-str1 = "I am sure that the shells are seashore shells. "
+""" str1 = "I am sure that the shells are seashore shells. "
 str2 = "So if she sells seashells on the seashore, "
 str3 = "The shells that she sells are seashells, "
 str4 = "I am sure She sells seashells on the seashore;"
@@ -19,4 +19,14 @@ str4 = str4.center(100)
 print(str1)
 print(str2)
 print(str3)
-print(str4)
+print(str4) """
+
+file = open('text.txt', 'r')
+lines = file.readlines()
+for line in lines:
+    print(line.center(100))
+
+with open('text.txt', 'r') as file:
+    lines = file.readlines()
+    for line in lines:
+        print(line.center(100))
