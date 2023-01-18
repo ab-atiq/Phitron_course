@@ -2,7 +2,7 @@
 void printCall(void)
 {
     static int count = 0;
-    printf("Called %d times.", ++count);
+    printf("Called %d times.\n", ++count);
 }
 int main()
 {
