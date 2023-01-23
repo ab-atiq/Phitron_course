@@ -1,11 +1,10 @@
-// pole arrange is sequencially or not
 #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int a, b, c;
-    cin >> a >> b >> c;
-    if (b - a == c - b)
+    string A, B, C;
+    cin >> A >> B >> C;
+    if (A[A.length()-1] == B[0] && B[B.length()-1] == C[0])
     {
         cout << "YES" << endl;
     }

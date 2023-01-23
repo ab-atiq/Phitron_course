@@ -9,7 +9,7 @@ void change(int **x)
 int main()
 {
     int n = 20;
-    int *ptr = &n;
+    int *ptr = &n; // ptr can point to an address which holds int data
     int **ptr2 = &ptr;
     change(ptr2);
     cout << n << endl;

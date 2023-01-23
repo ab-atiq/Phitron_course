@@ -1,4 +1,4 @@
-// vowel and consonant check
+// two rectangle area is equal or not
 #include <bits/stdc++.h>
 using namespace std;
 int main()

@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// using namespace one; // it will not work because of we declare namespace after declaration.
+// using namespace one; // it will not work because of we define namespace after declaration.
 namespace one
 {
     int x = 20;

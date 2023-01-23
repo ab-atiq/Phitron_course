@@ -1,4 +1,4 @@
-// vowel and consonant check
+// check two value sum is equal to one value.
 #include <bits/stdc++.h>
 using namespace std;
 int main()

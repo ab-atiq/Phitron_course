@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    // all digit sum using for loop
     int sum = 0;
     for (int i = 0; i < 10; i++)
     {
@@ -10,6 +11,7 @@ int main()
     }
     cout << "Sum is: " << sum << endl;
     
+    // all digit sum using while loop
     int j=0, sum2 = 0;
     while (j < 10)
     {

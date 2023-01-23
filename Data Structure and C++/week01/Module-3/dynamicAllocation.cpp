@@ -13,8 +13,9 @@ int main()
     }
     // free(ptr2); // delete ptr2 from heap memory
 
+
     // create dynamic heap allocation using c++
-    // int *ptr3 = new int; // simply create dynamic array. But it is not necessary create only one variable. we can declare one variable use (int ptr3;). Normally dynamic array use for multiple variable.
+    // int *ptr3 = new int; // simply create dynamic array with one length. But it is not necessary create only one variable. we can declare one variable use (int ptr3;). Normally dynamic array use for multiple variable.
     // int *ptr3 = new int[10]; // here store 10 garbage value
     // int *ptr3 = new int[10]{0}; // all value will 0.
 

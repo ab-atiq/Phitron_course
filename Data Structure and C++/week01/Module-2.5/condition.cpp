@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    // check which number is bigger or smaller.
     int a, b;
     cout<<"Enter a two number: ";
     cin >> a >> b;
@@ -18,6 +19,7 @@ int main()
         cout << "Two number is equal"<<endl;
     }
 
+    // check character is vowel or consonant.
     char c;
     cout<<"Enter a character: ";
     cin >> c;
@@ -31,6 +33,7 @@ int main()
         cout << "Character is consonant"<< endl;
     }
 
+    // chech digit name
     int n;
     cout<<"Enter a digit: ";
     cin >> n;

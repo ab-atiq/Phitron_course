@@ -1,3 +1,4 @@
+// total cost count
 #include <bits/stdc++.h>
 using namespace std;
 int main()

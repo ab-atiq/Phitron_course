@@ -25,5 +25,18 @@ int main()
     cin.getline(str2, 50);
     cout << "Show string: " << str2;
 
+    // string str3;
+    // cout<<"\nEnter a string without space: ";
+    // cin>>str3;
+    // cout<<"Your string is: "<<str3<<endl;
+    // cin>>str3; // this will take over one word
+
+    // multi-space string input
+    string str4;
+    cout<<"\nEnter a string with space: ";
+    getline(cin>>ws,str4);
+    cout<<"Your string is: "<<str4<<endl;
+
+
     return 0;
 }

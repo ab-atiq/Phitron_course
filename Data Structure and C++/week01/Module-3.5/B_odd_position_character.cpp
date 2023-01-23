@@ -3,18 +3,14 @@
 using namespace std;
 int main()
 {
-    char str[100020];
+    string str;
     cin >> str;
-    int len = strlen(str);
-    int i = 0;
-    while (i < len)
+    int len = str.length();
+    for (int i = 0; i < len; i += 2)
     {
-        if (i % 2 == 0)
-        {
-            cout << str[i];
-        }
-        i++;
+
+        cout << str[i];
     }
-    cout<<endl;
+    cout << endl;
     return 0;
 }
