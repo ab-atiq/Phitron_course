@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 void arrayPrint(int arr[], int s)
 {
     for (int i = 0; i < s; i++)
@@ -8,6 +9,7 @@ void arrayPrint(int arr[], int s)
     }
     cout << endl;
 }
+
 int main()
 {
     int size;
@@ -38,6 +40,7 @@ int main()
         a[j + 1] = key;
         arrayPrint(a, size);
     }
+    
     // print array element
     cout << "After insertion sort array element: ";
     arrayPrint(a, size);

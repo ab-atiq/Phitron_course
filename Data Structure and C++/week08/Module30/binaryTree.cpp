@@ -22,7 +22,7 @@ void inOrderTraversal(tNode *root, string &str);
 void preOrderTraversal(tNode *root, string &str);
 void postOrderTraversal(tNode *root, string &str);
 void levelOrderTraversal(tNode *root, string &str);
-int maxAtLevelOfTree(tNode *root, string &str);
+int maxAtLevelOfTree(tNode *root, string &str); 
 int findPositionInOrder(int in[], int start, int end, int findKey);
 tNode *BuildTreeFromPreAndInOrderTraversalString(int pre[], int in[], int start, int end);
 void printLeftNonLeaves(tNode *root);
@@ -196,20 +196,21 @@ void averageOfLevels(tNode *root)
     }
 }
 
+// here root is call by value. pointer accept in parameter as pointer.
 void printTree(tNode *root, int level)
 {
     if (root == NULL) // when tree is empty
     {
         return;
     }
-    // case 1 -> left or right child is NULL or not a root
+    // case 1 -> left or right child is NULL or node is not a root
     if (root->left_node == NULL && root->right_node == NULL)
     {
         cout << root->data << endl;
-        // if root is found that time we will not do any work below.
+        // if root is found that time we will not do any work below(case-2, letf node info, right node info).
         return;
     }
-    // case 2 -> left or right child is not NULL or a root  
+    // case 2 -> left or right child is not NULL or node is a root  
     else
     {
         cout << endl;
@@ -347,7 +348,7 @@ int main()
     // initially all nodes value assign in -1 that represent it is empty.
     for (int i = 0; i < totalNode; i++)
     {
-        // new node create then assign -1 in value.
+        // new node create then assign -1 in value. allNodes[i].data is wrong ans.
         allNodes[i] = new tNode(-1);
     }
 
@@ -413,7 +414,7 @@ int main()
     if (maxAtLevel == -1)
         cout << "You enter over level number." << endl;
     else
-        cout << "Maximum value at level: " << maxAtLevel << endl;
+        cout << "Maximum value at "<<level<<" level: " << maxAtLevel << endl;
 
     // Build Tree from pre-order and in-order traversal
     int inputPreTraversalString[totalNode], inputInTraversalString[totalNode];
@@ -458,7 +459,8 @@ input pre and in order traversal sting digit:
 0 1 3 4 2 5 7 8 6
 3 1 4 0 7 5 8 2 6
 
-Output:
+Output: 
+preorder format output: 
 Root: 0
 Left:
     Root: 1
@@ -475,8 +477,9 @@ In order Traversal: 314075826
 Pre Order Traversal: 013425786
 Post Order Traversal: 341785620
 Level Order Traversal: 012345678
+Reverse Level Order Traversal: 783456120
 
-Maximum value at level: 6
+Maximum value at 2 level: 6
 
 Pre order traversal of new created tree from pre and in order traversal: 013425786
 

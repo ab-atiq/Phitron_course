@@ -26,17 +26,17 @@ int binarySearch(int a[], int x, int lb, int ub)
     {
         return -1;
     }
-}
+};
 
 int main()
 {
-    int s;
+    int arrSize;
     cout << "Enter array size: ";
-    cin >> s;
+    cin >> arrSize;
 
-    int arr[s];
+    int arr[arrSize];
     cout << "Enter array element: ";
-    for (int i = 0; i < s; i++)
+    for (int i = 0; i < arrSize; i++)
     {
         cin >> arr[i];
     }
@@ -44,7 +44,7 @@ int main()
     int searchElement, index;
     cout << "Enter search element: ";
     cin >> searchElement;
-    index = binarySearch(arr, s, 0, s);
+    index = binarySearch(arr, searchElement, 0, arrSize);
 
     if (index == -1)
     {

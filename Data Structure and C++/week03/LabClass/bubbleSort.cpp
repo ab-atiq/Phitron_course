@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 void arrayPrint(int arr[], int s)
 {
     for (int i = 0; i < s; i++)
@@ -8,6 +9,7 @@ void arrayPrint(int arr[], int s)
     }
     cout << endl;
 }
+
 int main()
 {
     int size;
@@ -20,6 +22,7 @@ int main()
     // print array element
     cout << "All Array element: ";
     arrayPrint(a, size);
+    
     // bubble sort
     // first iteration will start from 1 to size-1
     for (int i = 1; i < size; i++)

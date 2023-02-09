@@ -30,10 +30,12 @@ int main()
     // string equal or not
     if (str1 == str2) // check using operation overloading
     {
+        cout << str1 << " " << str2 << endl;
         cout << "Two string are equal." << endl;
     }
     else
     {
+        cout << str1 << " " << str2 << endl;
         cout << "Two string are not equal." << endl;
     }
 

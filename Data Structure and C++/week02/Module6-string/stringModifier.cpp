@@ -23,7 +23,7 @@ int main()
     string str4 = "abcdefghij";
     str4.insert(1, "wxyz");
     cout << str4 << endl;
-    str4.erase(3, 5);
+    str4.erase(3, 5); // first value where start erase, secod value how much value erase.
     cout << str4 << endl;
 
     // swap two string

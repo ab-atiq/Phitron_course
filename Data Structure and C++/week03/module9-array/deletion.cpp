@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 void arrayPrint(int arr[], int s)
 {
     for (int i = 0; i < s; i++)
@@ -8,11 +9,12 @@ void arrayPrint(int arr[], int s)
     }
     cout << endl;
 }
+
 int main()
 {
-    int a[50];
     int size;
     cin >> size;
+    int a[size];
     for (int i = 0; i < size; i++)
     {
         cin >> a[i];
@@ -23,7 +25,7 @@ int main()
 
     // deletion
     int pos;
-    cout << "Enter deletion position: ";
+    cout << "Enter deletion index position: ";
     cin >> pos;
     if (size < 0 || size - 1 < pos)
     {
@@ -36,7 +38,7 @@ int main()
             size--;
         else
         {
-            // first or middle index -> swap from pos to size-1 and set sequentially from 0 index
+            // first or middle index -> swap from pos to size-1 by next position value.
             for (int i = pos; i < size - 1; i++)
             {
                 a[i] = a[i + 1];

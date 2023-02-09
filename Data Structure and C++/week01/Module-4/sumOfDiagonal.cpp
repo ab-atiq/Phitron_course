@@ -18,6 +18,7 @@ int main()
     {
         for (int j = 0; j < col; j++)
         {
+            // check row and column equal
             if (i == j)
             {
                 sum += arr[i][j];

@@ -8,6 +8,7 @@ void arrayPrint(int arr[], int s)
     }
     cout << endl;
 }
+
 int main()
 {
     int a[50];
@@ -22,15 +23,15 @@ int main()
 
     // insertion element in array
     int pos, value;
-    cout << "Enter position and value:";
+    cout << "Enter index position and value:";
     cin >> pos >> value;
-    if (size < 0 || size < pos)
+    if (pos < 0 || size < pos)
     {
         cout << "Invalid position" << endl;
     }
     else
     {
-        // i) swap technic
+        // i) swap technic: swap element from last to position by previous element
         for (int i = size - 1; i >= pos; i--)
         {
             a[i + 1] = a[i];
@@ -40,19 +41,20 @@ int main()
     // array after insertion
     cout << "All Array element: ";
     arrayPrint(a, size + 1);
-    // increase size 
+    // increase size
     size++;
+
     // insertion only exchange position and size value
-    cout << "Enter position and value:";
+    cout << "Enter index position and value:";
     cin >> pos >> value;
-    if (size < 0 || size < pos)
+    if (pos < 0 || size < pos)
     {
         cout << "Invalid position" << endl;
     }
     else
     {
-        // exchange position and size value
-        a[size]=a[pos];
+        // exchange position: position index value assign in last index then that index position assign input value.
+        a[size] = a[pos];
         a[pos] = value;
     }
     // array after insertion

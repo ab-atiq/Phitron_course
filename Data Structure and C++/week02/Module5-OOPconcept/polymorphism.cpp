@@ -4,6 +4,7 @@ using namespace std;
 class Example
 {
 public:
+    // function or method overloading
     int add(int x, int y)
     {
         return x + y;

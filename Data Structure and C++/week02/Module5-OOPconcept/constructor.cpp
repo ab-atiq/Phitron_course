@@ -52,9 +52,9 @@ int main()
     // Example e(10, 20, 30); // create object and call constructor
     // cout << e.x << " " << e.y << " " << e.z << endl;
 
-    Example e(12345);
-    e.setter(1905004, 12345);
-    cout << e.getter(12345) << endl;
+    Example e(12345); // initially set password
+    e.setter(1905004, 12345); // change password using setter
+    cout << e.getter(12345) << endl; // get the password
 
     return 0;
 }
