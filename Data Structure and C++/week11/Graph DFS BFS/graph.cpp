@@ -1,8 +1,6 @@
 // bidirectional weighted graph, make adjacency list, print adjacency list,
 #include <bits/stdc++.h>
-
 using namespace std;
-
 typedef pair<int, int> edgeWeight;
 
 class Graph
@@ -35,10 +33,12 @@ public:
 int main()
 {
     int V, E;
+    cout << "Enter total nodes and edges on graph: " << endl;
     cin >> V >> E;
     Graph g(V);
 
     // input all edges two node (u,v) and weight (w)
+    cout << "Enter " << E << " edges two nodes and weight: " << endl;
     for (int i = 0; i < E; i++)
     {
         int u, v, w;
@@ -47,6 +47,7 @@ int main()
     }
 
     // print adjacency list for all Vertices [V]
+    cout << "Adjacency list: " << endl;
     for (int i = 0; i < V; i++)
     {
         g.printList(i);
@@ -67,4 +68,12 @@ int main()
 4 5 6
 4 6 4
 5 6 2
+Adjacency list:
+0: ( 2, 1 )( 1, 7 )( 5, 3 )
+1: ( 0, 7 )( 3, 11 )
+2: ( 0, 1 )( 3, 3 )( 5, 8 )
+3: ( 1, 11 )( 2, 3 )( 6, 1 )
+4: ( 5, 6 )( 6, 4 )
+5: ( 0, 3 )( 2, 8 )( 4, 6 )( 6, 2 )
+6: ( 3, 1 )( 4, 4 )( 5, 2 )
 */
