@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% load first_tags %}
+{% block title %}
+About
+{% endblock title %}
+{% block content %}
+<h1>About Page</h1>
+<h3>{{player}}</h3>
+<h3>{{player|change_name:'change'}}</h3>
+<h3>{{player|change_name:'title'}}</h3>
+
+{% show_courses %}
+{% endblock content %}

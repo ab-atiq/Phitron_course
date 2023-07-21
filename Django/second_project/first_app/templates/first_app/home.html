@@ -1,0 +1,53 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}
+Home page
+{% endblock title %}
+{% block content %}
+<h1>This is home page.</h1>
+<h3>Author: {{author}}</h3>
+<!-- Django Template Language if, else if, else use -->
+{%if age >= 18 %}
+<h2>Your are eligable to access our website.</h2>
+{%else%}
+<h2>Your access denied our website.</h2>
+{%endif%}
+
+{%if mark >= 80%}
+<p>You got A+</p>
+{%elif mark >= 70%}
+<p>You got A</p>
+{%elif mark >= 60%}
+<p>You got B</p>
+{%elif mark >= 50%}
+<p>You got C</p>
+{%elif mark >= 40%}
+<p>You got D</p>
+{%else%}
+<p>You fail the examination</p>
+{%endif%}
+
+<!-- same code use from index.html page and working well -->
+<!-- static image use method: 1 -->
+<img src="{%static 'images/independent.jpg' %}" alt="independent day">
+
+<!-- static image use method: 2 -->
+<img src="{% get_static_prefix %}images/independent5.jpg "
+    alt="independent5 day">
+
+<!-- static image use method: 3 -->
+{% static 'images/independent6.jpg' as id%}
+<img src="{{id}}" alt="independent6 day">
+
+<!-- all static file load from 'static/first_app/' -->
+<!-- static image use method: 1 -->
+<img src="{%static 'first_app/images/other3.jpg' %}" alt="other">
+
+<!-- static image use method: 2 -->
+<img src="{% get_static_prefix %}first_app/images/other4.jpg "
+    alt="other">
+
+<!-- static image use method: 3 -->
+{% static 'first_app/images/other5.jpg' as other%}
+<img src="{{other}}" alt="other">
+{% endblock content %}

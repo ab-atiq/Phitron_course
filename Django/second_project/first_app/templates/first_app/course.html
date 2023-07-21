@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+{% load first_tags %}
+{% block title %}
+Course
+{% endblock title %}
+{% block content %}
+<h1>Course Page</h1>
+<h2>Congratulations, {{name}}!</h2>
+<h4>Your are successfully enroll our course</h4>
+<table border="1" width="500">
+    <tr>
+        <th>ID</th>
+        <th>Course</th>
+        <th>Teacher</th>
+    </tr>
+    <!-- Django Template Language for use -->
+    {%for c in courses%}
+    <tr>
+        <td>{{c.id}}</td>
+        <td>{{c.course}}</td>
+        <td>{{c.teacher}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{% endblock content %}

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Document{% endblock title %}</title>
+        <!-- static css file use -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+    </head>
+    <body class="bg-color">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- url setup style 1 -->
+                <a class="navbar-brand" href="{% url 'index' %}">Index</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <!-- url setup style 2 -->
+                            {% url 'home' as h%}
+                            <a class="nav-link active" aria-current="page"
+                                href="{{h}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- url setup style 3 -->
+                            <a class="nav-link" href="/course">Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- url setup style 4: get from context. it get ambiguous value when switch another page -->
+                            <!-- <a class="nav-link" href={{ab}}>About</a> -->
+                            <a class="nav-link" href='/about'>About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'form_html'%}">HTML Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'form_django'%}">Django Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% block content %}
+        <h1 class="color">This is my first template in django.</h1>
+        <!-- Django Template Language filters use -->
+        <h1>{{mark|add:'2'}}</h1>
+        <h1>{{mark|divisibleby:'2'}}</h1>
+        <h1>{{name|length}}</h1>
+        <h1>{{name|wordcount}}</h1>
+        <h1>{{name|make_list}}</h1>
+        <h1>{{name|upper}}</h1>
+        <h1>{{name|lower}}</h1>
+        <h1>{{blog|truncatewords:5}}</h1>
+        <h1>{{blog|truncatechars:50}}</h1>
+        <h1>{{lst|join:" | "}}</h1>
+        <!-- static image use method: 1 -->
+        <img src="{%static 'images/independent.jpg' %}" alt="independent day">
+
+        <!-- static image use method: 2 -->
+        <img src="{% get_static_prefix %}images/independent5.jpg "
+            alt="independent5 day">
+
+        <!-- static image use method: 3 -->
+        {% static 'images/independent6.jpg' as id%}
+        <img src="{{id}}" alt="independent6 day">
+
+        <!-- all static file load from 'static/first_app/' -->
+        <!-- static image use method: 1 -->
+        <img src="{%static 'first_app/images/other3.jpg' %}" alt="other">
+
+        <!-- static image use method: 2 -->
+        <img src="{% get_static_prefix %}first_app/images/other4.jpg "
+            alt="other">
+
+        <!-- static image use method: 3 -->
+        {% static 'first_app/images/other5.jpg' as other%}
+        <img src="{{other}}" alt="other">
+        {% endblock content %}
+        <!-- static js file use -->
+        <script src="{% static 'js/index.js' %}"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
