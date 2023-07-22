@@ -45,3 +45,4 @@ def form_django(request):
     else: 
         form = contactForm()
     return render(request, './first_app/form_django.html',{'form':form})
+
