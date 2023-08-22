@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Student
 from .forms import StudentForm
+from .models import Teacher1, Student1
 
 # Create your views here.
 
@@ -23,3 +24,15 @@ def student_form(request):
     else:
         form = StudentForm()
     return render(request, 'model_form.html', {'form':form})
+
+# def showData(request):
+    # teacher = Teacher1.objects.get(name = 'Atiqur')
+    # students = teacher.student.all()
+    # for s in students:
+    #     print(s.name)
+        
+    # stu = Student1.objects.get(name = 'Sabuj')
+    # teas = stu.teacher_set.all()
+    # for t in teachs:
+    #     print(t.name)
+    # return render(request, 'show_data.html')
