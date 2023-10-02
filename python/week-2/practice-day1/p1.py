@@ -8,7 +8,7 @@ If the name is missing then assign a default value anonymous
 
 
 def show_employee(name="Abul", salary="9000"):
-    print(name, salary)
+    print(f'My name is: {name}, My salary is: {salary}')
 
 
 n = input("Enter your name: ")

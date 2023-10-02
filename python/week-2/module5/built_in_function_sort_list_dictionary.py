@@ -27,16 +27,14 @@ actors = [
 sorted_actor_base_age = sorted(actors, key=lambda actor: actor['age'])
 print(sorted_actor_base_age)
 
-sorted_actor_base_age_reverse = sorted(
-    actors, key=lambda actor: actor['age'], reverse=True)
+sorted_actor_base_age_reverse = sorted(actors, key=lambda actor: actor['age'], reverse=True)
 print(sorted_actor_base_age_reverse)
 print()
 
 sorted_actor_base_name = sorted(actors, key=lambda actor: actor['name'])
 print(sorted_actor_base_name)
 
-sorted_actor_base_name_reverse = sorted(
-    actors, key=lambda actor: actor['name'], reverse=True)
+sorted_actor_base_name_reverse = sorted(actors, key=lambda actor: actor['name'], reverse=True)
 print(sorted_actor_base_name_reverse)
 
 # list sort

@@ -17,8 +17,7 @@ print(num_list_square)
 odd_num_list2 = [num for num in numbers if num % 2 != 0]
 print(odd_num_list2)
 
-odd_and_five_multiplier_num_list = [
-    num for num in numbers if num % 2 != 0 if num % 5 == 0]
+odd_and_five_multiplier_num_list = [num for num in numbers if num % 2 != 0 if num % 5 == 0]
 print(odd_and_five_multiplier_num_list)
 
 

@@ -25,8 +25,7 @@ def all_types(name, *args, **kargs):  # use both args and kwargs
     print(name, args, kargs)
 
 
-all_types("Rakib", "Hasan", "Monir", "Alif",
-          good="Atiq", better="Rony", best="No one")
+all_types("Rakib", "Hasan", "Monir", "Alif", good="Atiq", better="Rony", best="No one")
 
 
 def loop_all_types(name, *args, **kwargs):  # use both args and kwargs
@@ -38,8 +37,7 @@ def loop_all_types(name, *args, **kwargs):  # use both args and kwargs
         print(key, value)
 
 
-loop_all_types("Rakib", "Hasan", "Monir", "Alif",
-               good="Atiq", better="Rony", best="No one")
+loop_all_types("Rakib", "Hasan", "Monir", "Alif", good="Atiq", better="Rony", best="No one")
 
 
 # geek for geeks

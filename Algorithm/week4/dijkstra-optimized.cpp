@@ -143,7 +143,4 @@ if d[u] + c(u, v) < d[v]:
  -> O(|E| log |V^2|)
  -> O(2|E| log |V|)
  -> O(|E| log |V|)   [base 2]
-
-
-
 */

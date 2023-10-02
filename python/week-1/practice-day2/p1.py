@@ -11,7 +11,7 @@ output = ""
 for char in text:
     if char >= 'a' and char <= 'z':
         output += char.upper()
-    elif char >= 'A' and char <= 'z':
+    elif char >= 'A' and char <= 'Z':
         output += char.lower()
     else:
         output += char

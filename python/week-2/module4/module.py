@@ -23,5 +23,4 @@ print("module output:",res1)
 
 # another way to import as sort form
 from kargs import all_types as at
-at("Rakib", "Hasan", "Monir", "Alif",
-          good="Atiq", better="Rony", best="None")
+at("Rakib", "Hasan", "Monir", "Alif", good="Atiq", better="Rony", best="None")
