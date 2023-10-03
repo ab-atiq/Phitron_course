@@ -1,13 +1,15 @@
+// problem link - https://atcoder.jp/contests/dp/tasks/dp_a
+
 #include <bits/stdc++.h>
 using namespace std;
-const int N = 100005;
+const int N = 1e5 + 5;
 /*
-State: stone(n) -> cost of reaching n-th stone from 1-st stone.
-Base case: stone(1) then cost will be 0.
-Recurrence Relation: min(
-    stone(n-1)+abs(h[n]-h[n-1]),
-    stone(n-2)+abs(h[n]-h[n-2])
-    )
+- state: stone(n) -> cost of reaching n-th stone from 1st stone
+- recurrance: stone(n) = min(
+                            stone(n-1) + abs( h[n] - h[n-1])
+                            stone(n-2) + abs( h[n] - h[n-2])
+                        )
+- base case: stone(1) = 0
 */
 int h[N];
 int dp[N];
@@ -21,21 +23,28 @@ int main()
     {
         cin >> h[i];
     }
-    // base case
+
+    // 1. handle base case
     dp[1] = 0;
-    // loop through the states
+
+    // 2. loop through the states
     for (int i = 2; i <= n; i++)
     {
-        // solve from smaller subproblems
+        // 2.1. solve from smaller sub-problems
+
         int ans1 = dp[i - 1] + abs(h[i] - h[i - 1]);
-        if (n == 2)
+
+        // corner case
+        if (i == 2)
         {
             dp[i] = ans1;
             continue;
         }
+
         int ans2 = dp[i - 2] + abs(h[i] - h[i - 2]);
         dp[i] = min(ans1, ans2);
     }
+
     cout << dp[n] << endl;
     return 0;
 }
