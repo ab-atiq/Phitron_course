@@ -10,10 +10,10 @@ class StudentForm(forms.ModelForm):
             'roll':"Your ID",
         }
         widgets = {
-            'name':forms.TextInput(attrs={'class':'btn btn-primary'})
+            'name': forms.TextInput(attrs={'class':'btn btn-primary'})
         }
         help_texts = {
-            'address':"Give your full address. Like, (village, post, upzella, zella, district, country) "
+            'address': "Give your full address. Like, (village, post, upzella, zella, district, country) "
         }
         error_messages={
             'name':{'required':'Your name is required'}

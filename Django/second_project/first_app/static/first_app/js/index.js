@@ -1,1 +1,1 @@
-console.log("Hello! this is a js file")
+console.log("Hello! this is a js file from inside a application")

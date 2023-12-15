@@ -10,8 +10,8 @@ class Student(models.Model):
     def __str__(self):
         return self.name
 
-# without using inheritance and abstract
 
+''' without using inheritance and abstract'''
 # class StudentInfoModel(models.Model):
 #     name = models.CharField(max_length=20)
 #     roll = models.IntegerField()
@@ -25,7 +25,7 @@ class Student(models.Model):
 #     salary = models.IntegerField()
 
 
-# model inheritance and abstract base class
+'''model inheritance and abstract base class'''
 class CommonInfoClass(models.Model):
     name = models.CharField(max_length=20)
     city = models.CharField(max_length=20)
@@ -40,16 +40,17 @@ class StudentInfoModel(CommonInfoClass):
 class TeacherInfoModel(CommonInfoClass):
     salary = models.IntegerField()
     
-# multitable Inheritance
+''' multitable Inheritance'''
 class EmployeeModel(models.Model):
     name = models.CharField(max_length=20)
     city = models.CharField(max_length=30)
     designation = models.CharField(max_length=40)
+    
 class ManagerModel(EmployeeModel):
     take_interview = models.BooleanField()
     hiring = models.BooleanField()
     
-# proxy model 
+''' proxy model '''
 class Friend(models.Model):
     school = models.CharField(max_length=40)
     section = models.CharField(max_length=10)
@@ -61,7 +62,7 @@ class Me(Friend):
         proxy = True
         ordering = ['id']
 
-# one to one relationship 
+''' one to one relationship '''
 class Person(models.Model):
     name = models.CharField(max_length=30)
     city = models.CharField(max_length=50)
@@ -75,24 +76,26 @@ class Passport(models.Model):
     page = models.IntegerField()
     validity = models.IntegerField()
 
-# many to one relationship
+''' many to one relationship'''
 class Post(models.Model):
     user = models.ForeignKey(Person, on_delete=models.SET_NULL, null=True)
     post_cap = models.CharField(max_length=50)
     post_details = models.CharField(max_length=100)
     
-# many to many relationship
+''' many to many relationship'''
 class Student1(models.Model):
     name = models.CharField(max_length=30)
     roll = models.IntegerField()
     class_name = models.CharField(max_length=10)
+    
     def __str__(self) -> str:
         return self.name
     
 class Teacher1(models.Model):
-    student = models.ManyToManyField(Student1)
+    student = models.ManyToManyField(Student1, related_name='teacher1')
     name = models.CharField(max_length=30)
     subject = models.CharField(max_length=20)
     mobile = models.CharField(max_length=11)
+    
     def student_list(self):
-        return ",".join([str(i) for i in self.student.all()])
+        return ", ".join([str(i) for i in self.student.all()])

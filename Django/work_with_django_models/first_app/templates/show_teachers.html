@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+
+{% block title %} Show teachers {% endblock title %}
+{% block content %}
+<h1>This is Show teachers page</h1>
+<p>{{teachers}}</p>
+{% for teacher in teachers %}
+    <p>{{teacher.name}} {{teacher.subject}} {{teacher.mobile}}</p>
+{% endfor %}
+{% endblock content %}

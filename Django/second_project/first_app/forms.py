@@ -7,7 +7,7 @@ def len_check(value):
 
 class contactForm(forms.Form):
     # built in form validation added name, email, age and file field 
-    name = forms.CharField(label="User Name", initial='Abul',help_text="Total length must be within 70 characters",required=False,disabled=True, validators=[validators.MinLengthValidator(10,message='Enter a name at least 10 character'),validators.MaxLengthValidator(20,message="Enter a name within 20 character")])
+    name = forms.CharField(label="User Name", initial='Abul Bashar Atiq',help_text="Total length must be within 70 characters",required=False,disabled=True, validators=[validators.MinLengthValidator(10,message='Enter a name at least 10 character'),validators.MaxLengthValidator(20,message="Enter a name within 20 character")])
     email = forms.EmailField(label="User Email",validators=[validators.EmailValidator(message='Enter a valid Email')])
     # user defined validation function use 
     text = forms.CharField(validators=[len_check],widget=forms.Textarea(attrs={'id':'text_area','class':'description','placeholder':"Enter your own description"}))
@@ -17,22 +17,23 @@ class contactForm(forms.Form):
     check = forms.BooleanField()
     birthday = forms.DateField(widget=forms.DateInput(attrs={'type':'date'}))
     appointment = forms.DateTimeField(widget=forms.DateTimeInput(attrs={'type':'datetime-local'}))
+    # CharField and DateField will work same when give widget 'DateInput' or 'DateTimeInput'
     birthday2 = forms.CharField(widget=forms.DateInput(attrs={'type':'date'}))
     appointment2 = forms.CharField(widget=forms.DateTimeInput(attrs={'type':'datetime-local'}))
     CHOICES =  [('S','Small'),('M',"Medium"),("L","Large")]
     size = forms.ChoiceField(choices=CHOICES)
-    size1 = forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect)
+    size1 = forms.ChoiceField(choices=CHOICES, widget=forms.RadioSelect) # form field as a radio
     MEAL = [('P',"Pepperoni"),('M','Mashroom'),('B','Beef')]
     pizza = forms.MultipleChoiceField(choices=MEAL)
-    pizza1 = forms.MultipleChoiceField(choices=MEAL, widget=forms.CheckboxSelectMultiple)
-    file = forms.FileField(validators=[validators.FileExtensionValidator(allowed_extensions=['pdf','png'],message='File extention must be ended with .pdf or .png')])
+    pizza1 = forms.MultipleChoiceField(choices=MEAL, widget=forms.CheckboxSelectMultiple) # multiple select with checkbox
+    file = forms.FileField(validators=[validators.FileExtensionValidator(allowed_extensions=['pdf','png','jpg'], message='File extention must be ended with .pdf or .png or .jpg')]) # file extention validations
 
 
 class StudentForm(forms.Form):
     name = forms.CharField(widget=forms.TextInput)
     email = forms.CharField(widget=forms.EmailInput)
     
-    # Create validation of user name and email two function in class
+    '''Create validation of user name and email two function in class'''
     def clean_name(self):
         valName = self.cleaned_data['name']
         if len(valName) < 10:
@@ -49,7 +50,7 @@ class TeacherForm(forms.Form):
     name = forms.CharField(widget=forms.TextInput)
     email = forms.CharField(widget=forms.EmailInput)
     
-    # Create validation of user name and email in one function in class
+    '''Create validation of user name and email in one function in class'''
     def clean(self):
         # cleaned_data = super().clean()
         valName = self.cleaned_data['name']

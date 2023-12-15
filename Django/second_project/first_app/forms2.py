@@ -1,6 +1,5 @@
 from typing import Any, Dict
 from django import forms
-from django.core import validators
 
 class PasswordValidationProject(forms.Form):
     name = forms.CharField(widget=forms.TextInput)

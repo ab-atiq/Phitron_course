@@ -27,7 +27,7 @@ Home page
 <p>You fail the examination</p>
 {%endif%}
 
-<!-- same code use from index.html page and working well -->
+<!-- same code use from index.html page and working well from home.html -->
 <!-- static image use method: 1 -->
 <img src="{%static 'images/independent.jpg' %}" alt="independent day">
 
@@ -39,7 +39,7 @@ Home page
 {% static 'images/independent6.jpg' as id%}
 <img src="{{id}}" alt="independent6 day">
 
-<!-- all static file load from 'static/first_app/' -->
+<!-- all static file load from application 'static/first_app/' -->
 <!-- static image use method: 1 -->
 <img src="{%static 'first_app/images/other3.jpg' %}" alt="other">
 

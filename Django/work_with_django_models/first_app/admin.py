@@ -16,6 +16,7 @@ class EmployeeModelAdmin(admin.ModelAdmin):
 @admin.register(ManagerModel)
 class ManagerModelAdmin(admin.ModelAdmin):
     list_display = ['id','name','city','designation','take_interview','hiring']
+    
 # proxy model 
 @admin.register(Friend)
 class FriendModelAdmin(admin.ModelAdmin):

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="width: 50%; margin:auto;">
+    
+    <h1>Are you sure you want to delete?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Yes</button>
+        <a href="{% url 'showbookclass' %}" class="btn btn-primary">No</a>
+    </form>
+</div>
+{% endblock content %}
