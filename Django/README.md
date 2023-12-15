@@ -20,6 +20,7 @@ pip install -r requirements.txt
 
 step 4: go any project directory and run given command
 ```
+cd project_name
 python manage.py runserver 8000
 ```
 
