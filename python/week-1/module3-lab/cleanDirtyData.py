@@ -5,5 +5,5 @@ new_data = ""
 for char in data:
     if (char == 'a') or (char == 'e') or (char == 'i') or (char == 'o') or (char == 'u'):
         new_data += char+"_"
-new_data = new_data[:-1]
+new_data = new_data[:-1] # cut last '_' from string
 print(new_data)

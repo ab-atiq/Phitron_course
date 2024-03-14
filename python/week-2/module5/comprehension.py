@@ -9,6 +9,7 @@ print(odd_num_list)
 # one line
 num_list = [num for num in numbers]
 print(num_list)
+
 num_list_double = [num*2 for num in numbers]
 print(num_list_double)
 num_list_square = [num*num for num in numbers]

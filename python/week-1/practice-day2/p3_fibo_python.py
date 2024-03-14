@@ -18,4 +18,4 @@ def fibo(n):
 
 for i in range(n):
     x = fibo(i)
-    print(x)
+    print(x, end=" ")

@@ -11,6 +11,6 @@ print()
 
 # second method: dictionary key use, it has the same order as the original List.
 mylist = ["a", "b", "a", "c", "c"]
-# print(dict.fromkeys(mylist))
+print(dict.fromkeys(mylist))
 mylist = list(dict.fromkeys(mylist))
 print(mylist)

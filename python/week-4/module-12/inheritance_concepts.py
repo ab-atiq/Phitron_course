@@ -1,5 +1,5 @@
 # parent class 
-# base case
+# base class
 class BaseClass:
     pass
 

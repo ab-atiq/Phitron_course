@@ -5,7 +5,7 @@ print(numbers_tuple)
 read = numbers_tuple[2]
 print(read)
 # numbers_tuple[2] = 105 # we can not write the tuple
-# del numbers_tuple[2]  # we can not write the tuple
+# del numbers_tuple[2]  # we can not delete the tuple
 print(numbers_tuple)
 
 tuple2D = ([12, 45, 12], [35, 22, 12])

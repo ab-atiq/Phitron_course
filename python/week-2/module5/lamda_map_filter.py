@@ -30,6 +30,8 @@ print(list_num)
 
 double_list_num_add = map(double_it, list_num)
 print(double_list_num_add)
+convert_object_to_list = list(double_list_num_add)
+print(convert_object_to_list)
 
 double_list_num = list(map(double_it, list_num))
 print(double_list_num)
@@ -37,10 +39,11 @@ print(double_list_num)
 double_list_num2 = list(map(double_it2, list_num))
 print(double_list_num2)
 
+# map using lambda
 double_list_num3 = list(map(lambda x: x*2, list_num))
 print(double_list_num3)
 
-# filter use
+# filter using lambda
 big_number = list(filter(lambda x: x > 30, list_num))
 print(big_number)
 

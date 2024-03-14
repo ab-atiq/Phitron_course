@@ -7,7 +7,7 @@ If the name is missing then assign a default value anonymous
 """
 
 
-def show_employee(name="Abul", salary="9000"):
+def show_employee(name="anonymous", salary="9000"):
     print(f'My name is: {name}, My salary is: {salary}')
 
 

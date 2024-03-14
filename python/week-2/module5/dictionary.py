@@ -1,4 +1,4 @@
-sub_marks = {"physics": 59, "chemistry": 75, "math": 70}
+sub_marks = {"physics": 59, "chemistry": 75.5, "math": 70}
 print(sub_marks)
 sub_marks["biology"] = 86.6  # key is not found then it will add the dictionary
 print(sub_marks)

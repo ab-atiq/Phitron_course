@@ -16,7 +16,7 @@ exam_bcs = 'BCS'
 passed_bcs = True
 
 if (exam_bank == 'Bank' and passed_bank == True) and (exam_bcs == 'BCS' and passed_bcs == True):
-    print("Tor biya pakka kono sundori mayar sate")
+    print("Tor biya pakka kono sundori mayar sate and joutuk o laker opor paba")
 elif (exam_bank == 'Bank' and passed_bank == True) or (exam_bcs == 'BCS' and passed_bcs == True):
     print("Tor biya pakka kono sundori mayar sate")
 else:
@@ -32,5 +32,3 @@ if salary > 40000:
         print("Don't worry! you can made flat in future.")
 else:
     print("Valo kore por naile tor life brita")
-
-

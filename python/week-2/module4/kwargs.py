@@ -7,8 +7,8 @@ f_l_name = name(l_name="Atiqur", f_name="Rahman")
 print(f_l_name)
 
 
-def all_names(**kwargs):  # kwargs (key value pair) use
-    print(kwargs)  # print the dictionary
+def all_names(**kwargs):    # kwargs (key value pair) use
+    print(kwargs)           # print the dictionary
 
 
 all_names(first_name="Abul", last_name="Atiq", title="Pramanik")
@@ -32,6 +32,7 @@ def loop_all_types(name, *args, **kwargs):  # use both args and kwargs
     print(name)
     for n in args:
         print(n)
+        
     print(kwargs)
     for key, value in kwargs.items():  # key and value print, first we have to make kwargs as item
         print(key, value)
@@ -55,8 +56,6 @@ myFun(**kwargs)
 
 
 # set value in object (geek for geeks)
-
-
 class car():  # defining car class
     def __init__(self, **kwargs):  # args receives unlimited no. of arguments as an array
         self.speed = kwargs['s']  # access args index like array does

@@ -1,8 +1,8 @@
 class Student:
     def __init__(self, name, id, marks) -> None:
-        self._name = name # protected
-        self.__id = id # private
-        self.marks = marks # public
+        self._name = name   # protected
+        self.__id = id      # private
+        self.marks = marks  # public
 
     # read only -> we can read this property But we can not set student id from object call.
     @property

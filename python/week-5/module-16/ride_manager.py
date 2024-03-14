@@ -10,7 +10,7 @@ class RideManager:
             self.__available_cars.append(vehicle)
         elif vehicle_type == 'bike':
             self.__available_bikes.append(vehicle)
-        if vehicle_type == 'cng':
+        elif vehicle_type == 'cng':
             self.__available_cng.append(vehicle)
 
     def get_available_cars(self):

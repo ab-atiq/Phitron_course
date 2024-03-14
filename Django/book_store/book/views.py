@@ -40,7 +40,7 @@ def store_book(request):
         book = BookStoreForm() 
         return render(request, "store_book.html", {'form':book})
 
-'''Class Base view for store book'''
+'''1st method: Class Base view for store book'''
 class StoreBookClass(FormView):
     template_name = "store_book_class.html"
     form_class = BookStoreForm

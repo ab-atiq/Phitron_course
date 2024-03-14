@@ -16,7 +16,7 @@ for i in range(40):
     print(i, fibo(i))
 
 end_time = time()
-millisecond = (end_time-start_time)*1000  # millisecond = second + 1000
+millisecond = (end_time-start_time)*1000  # millisecond = second * 1000
 print("Total time", millisecond)
 
 # without cache use

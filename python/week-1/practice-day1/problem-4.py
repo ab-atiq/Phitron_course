@@ -15,6 +15,7 @@ while 1:
     if num == "Quit":
         print("(stop the program)")
         break
+    
     num = int(num)
     if num < 0:
         print(num, " is negative.")

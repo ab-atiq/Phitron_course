@@ -14,6 +14,7 @@ class MyNumbers:
 
 myClass = MyNumbers()
 myIter = iter(myClass)  # iterator full object myClass
+print(myIter)  
 
 try:
     while True:

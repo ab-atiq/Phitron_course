@@ -4,7 +4,6 @@
 import json
 import requests
 import PyWallpaper
-# import json
 
 api_url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
 
@@ -25,7 +24,7 @@ print(req_image)
 with open('open.jpg', 'wb') as image:
     image.write(req_image.content)
 
-# same work as 25-26 line of code
+# same work as 24-25 line of code
 
 # image = open('open.jgp','wb')
 # image.write(req_image.content)
