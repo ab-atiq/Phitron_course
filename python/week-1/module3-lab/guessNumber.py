@@ -11,7 +11,7 @@ print("Guess a number")
 sleep(1)
 print("Multiply 2 with your number")
 sleep(3)
-print("Add 8 with the number")
+print("Add 8 with the number") # it 2's divisor will be output
 sleep(2)
 print("Divide the whole result with 2")
 sleep(5)

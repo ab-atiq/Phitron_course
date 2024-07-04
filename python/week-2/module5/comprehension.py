@@ -41,3 +41,28 @@ for name in names:
         if age >= 24:
             big_person.append((name, age))
 print(big_person)
+
+
+# remove items from a list while iterating. Remove numbers greater than 50
+number_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+new_lst=[]
+for num in number_list:
+    if num <= 50:
+        new_lst.append(num)
+print(new_lst)
+
+# remove items from a list while iterate using list comprehension. Remove numbers greater than 50
+number_list=[(num) for num in number_list if num<= 50]
+print(number_list)
+
+# remove items from a list while iterating but without creating a different copy of a list. Remove numbers greater than 50
+number_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+i = 0
+n = len(number_list)
+while i < n:               # iterate list till i is smaller than n
+    if number_list[i] > 50:
+        del number_list[i] # delete current index from list
+        n = n - 1          # reduce the list size and deleted index recheck
+    else:
+        i = i + 1          # move to next item
+print(number_list)

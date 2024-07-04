@@ -2,7 +2,7 @@
 
 ## Course content
 
-1. C programing language
-2. Data Stucture and Algorithm using C++
+1. C programming language
+2. Data Structure and Algorithm using C++
 3. Python Programming language
 4. Django and DRF (Django REST Framework)

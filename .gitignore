@@ -1,5 +1,8 @@
 .vscode
+__pycache__
+.cph
 venv
+
 
 check.py
 bb.cpp
