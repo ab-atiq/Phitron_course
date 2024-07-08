@@ -1,3 +1,4 @@
+# reverse a string using list
 str = "Atiqur Rahman"
 print(str)
 lstOfStr = list(str)

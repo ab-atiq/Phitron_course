@@ -29,7 +29,7 @@ list_num = [15, 20, 30, 35, 50]
 print(list_num)
 
 double_list_num_add = map(double_it, list_num)
-print(double_list_num_add)
+print(double_list_num_add) # it is object
 convert_object_to_list = list(double_list_num_add)
 print(convert_object_to_list)
 
