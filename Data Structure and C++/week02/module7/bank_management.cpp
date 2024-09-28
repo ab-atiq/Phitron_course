@@ -30,8 +30,8 @@ public:
         }
         else
         {
-            // return -1;
-            return this->balance;
+            return -1;
+            // return this->balance;
         }
     }
     void add_money(string pass, int money)
@@ -126,7 +126,7 @@ Account *create_account()
 {
     string account_holder, address, password;
     int age;
-    cout << "Please give your name address age password respectively: ";
+    cout << "Please give your name, address, age, password respectively: ";
     cin >> account_holder >> address >> age >> password;
     // int *a = new a[];
     Account *my_acc = new Account(account_holder, address, age, password);
