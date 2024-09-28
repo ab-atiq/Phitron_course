@@ -4,6 +4,8 @@ __pycache__
 .cph
 venv
 
+*.exe
+*.o
 
-check.py
-bb.cpp
+# check.py
+# bb.cpp

@@ -16,21 +16,25 @@ f.close() # good practice to always close the file when you are done with it
 # write a line in file
 with open('message.txt','a') as fileWrite:
     fileWrite.write("My name is atiqur rahman.")
+    fileWrite.close()
 
 # read file as present in the file
 with open('message.txt','r') as fileRead:
     txt = fileRead.read()
     print(txt)
+    fileRead.close()
 
 # all single line show
 with open("message.txt", "r") as allLineFile:
     for singleLine in allLineFile:
         print(singleLine, end="")
+        allLineFile.close()
 
 # all line in one line with space separated
 with open('message.txt', 'r') as allLineFile:
     data = allLineFile.read().replace('\n', ' ') # replace new line with space
     print(data)
+    allLineFile.close()
     
 # all line in one line with space separated
 file = open("message.txt", "r")

@@ -33,7 +33,7 @@ int main()
         cout << "Character is consonant"<< endl;
     }
 
-    // chech digit name
+    // check digit name
     int n;
     cout<<"Enter a digit: ";
     cin >> n;

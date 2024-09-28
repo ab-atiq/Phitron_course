@@ -1,4 +1,4 @@
-// pole arrange is sequencially or not
+// pole arrange is sequentially of numbers
 #include <bits/stdc++.h>
 using namespace std;
 int main()

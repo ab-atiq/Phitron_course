@@ -1,0 +1,13 @@
+# extention file remove
+#ignore all files in each directory
+*/*
+Exam practice
+.vscode
+#unignore .c files in each director
+!*/*.c
+!*/*.cpp
+!*/*.py
+#unignore .h header files in each directory
+# !*/*.h
+#unignore .gitignore
+!.gitignore 

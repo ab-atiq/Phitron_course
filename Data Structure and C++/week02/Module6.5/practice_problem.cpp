@@ -58,6 +58,7 @@ int main()
     }
     int roll, marks;
     string password;
+    cout << "Enter roll, marks and password: ";
     cin >> roll >> marks >> password;
     bool found = false;
     for (int i = 0; i < n; i++)

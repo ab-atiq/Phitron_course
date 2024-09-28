@@ -31,7 +31,7 @@ public:
     }
     void tellMe()
     {
-         // y is protected, so only inherit class can access protected variable.
+        // y is protected, so only inherit class can access protected variable.
         cout << "Protected Value is: " << y << endl;
     }
 };
@@ -39,10 +39,10 @@ public:
 int main()
 {
     Parent pt(50, 60, 70);
-    cout<<pt.x<<endl; // y is protected, z is private
+    cout << pt.x << endl; // y is protected, z is private
     Child cd(100, 10, 20, 30);
-    cout<<cd.xx<<endl; // cd.xx is public for instance of Child class.
-    cout << cd.x << endl; // we can not access cd.y and cd.z. because of, they are private and protected.
+    cout << cd.xx << endl; // cd.xx is public for instance of Child class.
+    cout << cd.x << endl;  // we can not access cd.y and cd.z. because of, they are private and protected.
     cd.tellMe();
     return 0;
 }

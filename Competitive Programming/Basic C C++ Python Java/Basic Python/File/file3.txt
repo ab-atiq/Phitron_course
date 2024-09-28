@@ -1,0 +1,1 @@
+New man is added from file write append function

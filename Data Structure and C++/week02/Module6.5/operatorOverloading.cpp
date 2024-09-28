@@ -26,6 +26,7 @@ public:
 int main()
 {
     Example a(10), b(20), c(30);
+    // first choice
     // Example ans = a + b;
     // cout << ans.x << endl;
     // Example ans2 = ans + c;

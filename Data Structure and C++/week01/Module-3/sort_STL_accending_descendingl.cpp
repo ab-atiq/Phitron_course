@@ -7,20 +7,20 @@ int main()
     int n = sizeof(arr) / sizeof(arr[0]);
     sort(arr, arr + n);
 
-    cout << "Array sort accending order: ";
+    cout << "Array sort ascending order: ";
     for (int i = 0; i < n; ++i)
         cout << arr[i] << " ";
 
     sort(arr, arr + n, greater<int>()); // descending order sort using greater<>().
     cout << endl
-         << "Array sort decending order: ";
+         << "Array sort descending order: ";
     for (int i = 0; i < n; ++i)
         cout << arr[i] << " ";
 
     // sorting character array
     char arr2[6] = "batul";
     sort(arr2, arr2 + 6);
-    cout << "\nAccending character array sort: ";
+    cout << "\nAscending character array sort: ";
     for (int i = 0; i < 6; i++)
     {
         cout << arr2[i] << " ";
@@ -35,7 +35,7 @@ int main()
     // sorting string
     string str = "batul";
     sort(str.begin(), str.end());
-    cout << "\nAccending sort in string: ";
+    cout << "\nAscending sort in string: ";
     for (char c : str)
     {
         cout << c << " ";
