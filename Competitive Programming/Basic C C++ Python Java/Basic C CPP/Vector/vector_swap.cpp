@@ -10,9 +10,10 @@ int main()
 
     v2.push_back(11);
     v2.push_back(22);
+
     v3.push_back(33);
     v3.push_back(44);
-  
+
     cout << "Before swap: ";
     for (int i = 0; i < v2.size(); i++)
         cout << v2[i] << " ";

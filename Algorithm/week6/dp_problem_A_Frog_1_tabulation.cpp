@@ -5,7 +5,7 @@ using namespace std;
 const int N = 1e5 + 5;
 /*
 - state: stone(n) -> cost of reaching n-th stone from 1st stone
-- recurrance: stone(n) = min(
+- recurrence: stone(n) = min(
                             stone(n-1) + abs( h[n] - h[n-1])
                             stone(n-2) + abs( h[n] - h[n-2])
                         )

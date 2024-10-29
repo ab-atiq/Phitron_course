@@ -38,8 +38,8 @@ int main()
                 if (ch == '?')
                 {
                     ch = rep_char;
-                }
-            }
+                };
+            };
 
             int cur_num = stoi(temp);
 
