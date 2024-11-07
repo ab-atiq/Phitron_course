@@ -22,13 +22,19 @@ int main()
         {
             cin >> v[i];
         }
-        sort(v.begin(), v.end(), greater<ll>());
-        for (ll i = n - 1; i > 0; i--)
+        bool flag = true;
+        for (ll i = 0; i < n - 1; i++)
         {
-            int tem = floor((v[i] + v[i - 1]) / (double)2);
-            v[i - 1] = tem;
+            ll val = abs(v[i] - v[i + 1]);
+            if (val != 5 && val != 7)
+            {
+                cout << "NO" << endl;
+                flag = false;
+                break;
+            }
         }
-        cout << v[0] << endl;
+        if (flag)
+            cout << "YES" << endl;
     }
     return 0;
 }

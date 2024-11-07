@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
+
 long long int fib(int n)
 {
     if (n <= 2)
         return 1;
     return fib(n - 1) + fib(n - 2);
 }
+
 int main()
 {
     cout << "Fibonacci 6 th position value: " << fib(6) << endl;

@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-long long int dp[100];
+long long int dp[100]; // all value assign as 0
 
 /*
 fibonacci sequence
@@ -29,13 +29,14 @@ long long int fib(int n)
     if (n <= 2)
         return 1;
     // 2. check if current state is already solved
-    // if (dp[n] != -1) when, we will use -1 
+    // if (dp[n] != -1) when, we will use -1
     if (dp[n] != 0)
         return dp[n];
 
     // 3. calculate from smaller sub-problems
     dp[n] = fib(n - 1) + fib(n - 2);
     return dp[n];
+    // return dp[n] = fib(n - 1) + fib(n - 2); // merge 2 lines with 1 line.
 }
 
 int main()

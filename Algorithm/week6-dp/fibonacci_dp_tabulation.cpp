@@ -1,15 +1,13 @@
 #include <iostream>
 using namespace std;
 const int N = 101;
-/*
+long long int dp[N];
 
+/*
 - fib(n) -> calculates the nth fibonacci number
 - fib(n) = fib(n-1) + fib(n-2)
 - fib(1) = 1, fib(2) = 1
-
 */
-
-int dp[N];
 
 int main()
 {

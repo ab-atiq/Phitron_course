@@ -4,10 +4,8 @@
 - Identify the recursive equation from the smaller problems
 - Define base case
 
-
 # Memoization-Method (recursive)
 ===============================
-
 fun(n, a, b, c, ...) {
     // 1. handle base case
 
@@ -16,10 +14,8 @@ fun(n, a, b, c, ...) {
     // 3. calculate the result from smaller sub-problems
 }
 
-
 # Tabulation-Method (iterative)
 ==============================
-
 main() {
 
     // 1. handle base case
