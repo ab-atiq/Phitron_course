@@ -92,15 +92,17 @@ int main()
         int u, v, w;
         cin >> u >> v >> w;
         adj_list[u].push_back({v, w});
-        adj_list[v].push_back({u, w});
+        // adj_list[v].push_back({u, w});
     }
 
     int src = 1;
     dijkstra(src);
 
+    cout << "Distance from src " << src << " to all other nodes" << endl;
     for (int i = 1; i <= nodes; i++)
     {
-        cout << d[i] << " ";
+        cout << "Vertex " << i << " distance from src is " << d[i] << endl;
+        // cout << d[i] << " ";
     }
     cout << endl;
     return 0;

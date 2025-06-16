@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void removeDuplicacy(string str, int idx, string newString)
+void removeDuplicate(string str, int idx, string newString)
 {
     static bool arr[26] = {false};
     if (str.length() == idx)
@@ -11,24 +11,24 @@ void removeDuplicacy(string str, int idx, string newString)
     char ch = str.at(idx);
     if (arr[ch - 'a'] == true)
     {
-        removeDuplicacy(str, idx + 1, newString);
+        removeDuplicate(str, idx + 1, newString);
     }
     else
     {
         newString += ch;
         arr[ch - 'a'] = true;
-        removeDuplicacy(str, idx + 1, newString);
+        removeDuplicate(str, idx + 1, newString);
     }
 }
 int main()
 {
     string str;
     cin >> str;
-    removeDuplicacy(str, 0, "");
+    removeDuplicate(str, 0, "");
     return 0;
 }
 
-/* 
+/*
 input: abbccda
 output: abcd
  */
